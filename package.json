@@ -1,0 +1,22 @@
+{
+  "name": "create-new-README",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cucius/create-new-README.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cucius/create-new-README/issues"
+  },
+  "homepage": "https://github.com/Cucius/create-new-README#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
