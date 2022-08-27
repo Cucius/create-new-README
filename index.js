@@ -113,7 +113,7 @@ inquirer
     
     Find my GitHub at:
     
-    [Chase Metherd](https://github.com/${data.github}/)
+[Chase Metherd](https://github.com/${data.github}/)
       
 `;
     //Writes the received data into the baseHtml
