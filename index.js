@@ -45,11 +45,12 @@ inquirer
     },
     {
       type: "checkbox",
-      message: "What is your email address?",
+      message: "What is License are you using?",
       choices: [
-        { name: "license1", value: "license1" },
-        { name: "license2", value: "license2" },
-        { name: "license3", value: "license3" },
+        { name: "Apache", value: "![Badges](https://img.shields.io/badge/license-Apache%202.0-blue)" },
+        { name: "MIT", value: "![Badges](https://img.shields.io/badge/license-MIT-green)" },
+        { name: "GPLv2", value: "![Badges](https://img.shields.io/badge/license-GPL%20v2-orange)" },
+        { name: "None of the Above", value: null },
       ],
       name: "licenses",
     },
@@ -57,6 +58,7 @@ inquirer
   .then((data) => {
     const baseREADME = ` 
 # ${data.title}
+(${data.licenses.join("").toString()})
 
 ## Description
     
@@ -99,8 +101,7 @@ inquirer
     
 ## License Information
     
-    ${data.licenses}
-    
+       
     
     
 ## Questions
@@ -117,6 +118,6 @@ inquirer
 `;
     //Writes the received data into the baseHtml
     fs.writeFile("README.md", baseREADME, (err) => {
-      err ? console.log("Fix it") : console.log("Well Done");
+      err ? console.log("Fix it") : console.log("README created");
     });
   });
